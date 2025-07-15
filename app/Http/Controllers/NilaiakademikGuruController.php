@@ -161,7 +161,7 @@ class NilaiakademikGuruController extends Controller
 
         $nilai->save();
 
-        return redirect()->route('nilai_akademik.index')->with('success', 'Data nilai akademik berhasil diperbarui.');
+        return redirect()->route('guru.nilai_akademik.index')->with('success', 'Data nilai akademik berhasil diperbarui.');
     }
 
 

@@ -76,7 +76,7 @@
       processing: true,
       scrollX: true,
       responsive: true,
-      ajax: '{{ route('nilai_akademik.data') }}',
+      ajax: '{{ route('guru.nilai_akademik.data') }}',
       columns: [
         { data: 'semester', name: 'semester' },
         { data: 'siswa', name: 'siswa' },
@@ -143,7 +143,7 @@
 
     // Tambah Data
     $('#btnTambah').click(function () {
-      $.get("{{ route('nilai_akademik.create') }}", function (data) {
+      $.get("{{ route('guru.nilai_akademik.create') }}", function (data) {
         $('#modalContent').html(data);
         $('#modalTambahNilaiAkademik').modal('show');
 

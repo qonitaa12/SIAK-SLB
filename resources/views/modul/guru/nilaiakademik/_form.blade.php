@@ -2,7 +2,7 @@
   <div class="card-body">
     <p class="card-description text-muted">Masukkan data nilai akademik</p>
 
-    <form id="formTambahNilaiAkademik" action="{{ route('nilai_akademik.store') }}" method="POST" onsubmit="return confirm('Yakin kirim data?')">
+    <form id="formTambahNilaiAkademik" action="{{ route('guru.nilai_akademik.store') }}" method="POST" onsubmit="return confirm('Yakin kirim data?')">
       @csrf
 
       <div class="row">
@@ -143,7 +143,7 @@
 
     if (id_mapel && id_kelas_siswa) {
       $.ajax({
-        url: `{{ route('nilai_akademik.get_guru_mapel') }}`,
+        url: `{{ route('guru.nilai_akademik.get_guru_mapel') }}`,
         type: 'POST', // <- tambahkan baris ini
         data: {
           _token: '{{ csrf_token() }}',

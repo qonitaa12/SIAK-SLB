@@ -82,7 +82,7 @@
       processing: true,
       scrollX: true,
       responsive: true,
-      ajax: '{{ route('nilai_akademik.data') }}',
+      ajax: '{{ route('orangtua.nilai_akademik.data') }}',
       columns: [
         { data: 'semester', name: 'semester' },
         { data: 'siswa', name: 'siswa' },

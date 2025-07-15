@@ -220,23 +220,23 @@ Route::get('/konseling/{id}', [KonselingGuruController::class, 'show'])->name('g
 Route::put('/konseling/{konseling}', [KonselingGuruController::class, 'update'])->name('guru.konseling.update');
 Route::post('/konseling/{id}/delete', [KonselingGuruController::class, 'delete'])->name('guru.konseling.delete');
 
-Route::get('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'index'])->name('nilai_akademik.index');
-Route::get('/nilai_akademik_guru/data', [NilaiakademikGuruController::class, 'getData'])->name('nilai_akademik.data');
-Route::get('/nilai_akademik_guru/create', [NilaiakademikGuruController::class, 'create'])->name('nilai_akademik.create');
-Route::post('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'store'])->name('nilai_akademik.store');
-Route::get('/nilai_akademik/{id}/edit', [NilaiakademikGuruController::class, 'edit'])->name('nilai_akademik.edit');
-Route::put('/nilai_akademik/{nilai_akademik}', [NilaiakademikGuruController::class, 'update'])->name('nilai_akademik.update');
-Route::post('/nilai_akademik/{id}/delete', [NilaiakademikGuruController::class, 'delete'])->name('nilai_akademik.delete');
-Route::post('/nilai_akademik/get-guru-mapel', [NilaiakademikGuruController::class, 'getGuruMapelBySiswaDanMapel'])->name('nilai_akademik.get_guru_mapel');
+Route::get('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'index'])->name('guru.nilai_akademik.index');
+Route::get('/nilai_akademik_guru/data', [NilaiakademikGuruController::class, 'getData'])->name('guru.nilai_akademik.data');
+Route::get('/nilai_akademik_guru/create', [NilaiakademikGuruController::class, 'create'])->name('guru.nilai_akademik.create');
+Route::post('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'store'])->name('guru.nilai_akademik.store');
+Route::get('/nilai_akademik/{id}/edit', [NilaiakademikGuruController::class, 'edit'])->name('guru.nilai_akademik.edit');
+Route::put('/nilai_akademik/{nilai_akademik}', [NilaiakademikGuruController::class, 'update'])->name('guru.nilai_akademik.update');
+Route::post('/nilai_akademik/{id}/delete', [NilaiakademikGuruController::class, 'delete'])->name('guru.nilai_akademik.delete');
+Route::post('/nilai_akademik/get-guru-mapel', [NilaiakademikGuruController::class, 'getGuruMapelBySiswaDanMapel'])->name('guru.nilai_akademik.get_guru_mapel');
 
-Route::get('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'index'])->name('nilai_akademik.index');
-Route::get('/nilai_akademik_guru/data', [NilaiakademikGuruController::class, 'getData'])->name('nilai_akademik.data');
-Route::get('/nilai_akademik_guru/create', [NilaiakademikGuruController::class, 'create'])->name('nilai_akademik.create');
-Route::post('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'store'])->name('nilai_akademik.store');
-Route::get('/nilai_akademik/{id}/edit', [NilaiakademikGuruController::class, 'edit'])->name('nilai_akademik.edit');
-Route::put('/nilai_akademik/{nilai_akademik}', [NilaiakademikGuruController::class, 'update'])->name('nilai_akademik.update');
-Route::post('/nilai_akademik/{id}/delete', [NilaiakademikGuruController::class, 'delete'])->name('nilai_akademik.delete');
-Route::post('/nilai_akademik/get-guru-mapel', [NilaiakademikGuruController::class, 'getGuruMapelBySiswaDanMapel'])->name('nilai_akademik.get_guru_mapel');
+// Route::get('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'index'])->name('nilai_akademik.index');
+// Route::get('/nilai_akademik_guru/data', [NilaiakademikGuruController::class, 'getData'])->name('nilai_akademik.data');
+// Route::get('/nilai_akademik_guru/create', [NilaiakademikGuruController::class, 'create'])->name('nilai_akademik.create');
+// Route::post('/nilai_akademik_guru', [NilaiakademikGuruController::class, 'store'])->name('nilai_akademik.store');
+// Route::get('/nilai_akademik/{id}/edit', [NilaiakademikGuruController::class, 'edit'])->name('nilai_akademik.edit');
+// Route::put('/nilai_akademik/{nilai_akademik}', [NilaiakademikGuruController::class, 'update'])->name('nilai_akademik.update');
+// Route::post('/nilai_akademik/{id}/delete', [NilaiakademikGuruController::class, 'delete'])->name('nilai_akademik.delete');
+// Route::post('/nilai_akademik/get-guru-mapel', [NilaiakademikGuruController::class, 'getGuruMapelBySiswaDanMapel'])->name('nilai_akademik.get_guru_mapel');
 
 Route::get('/siswa_guru', [SiswaGuruController::class, 'index'])->name('guru.siswa.index');
 Route::get('/siswa_guru/data', [SiswaGuruController::class, 'getData'])->name('guru.siswa.data');
@@ -275,8 +275,8 @@ Route::get('/konseling_orangtua/data', [KonselingOrangtuaController::class, 'get
 Route::get('/prestasi_orangtua', [PrestasiOrangtuaController::class, 'index'])->name('orangtua.prestasi.index');
 Route::get('/prestasi_orangtua/data', [PrestasiOrangtuaController::class, 'getData'])->name('orangtua.prestasi.data');
 
-Route::get('/nilai_akademik_orangtua', [NilaiakademikOrangtuaController::class, 'index'])->name('nilai_akademik.index');
-Route::get('/nilai_akademik_orangtua/data', [NilaiakademikOrangtuaController::class, 'getData'])->name('nilai_akademik.data');
+Route::get('/nilai_akademik_orangtua', [NilaiakademikOrangtuaController::class, 'index'])->name('orangtua.nilai_akademik.index');
+Route::get('/nilai_akademik_orangtua/data', [NilaiakademikOrangtuaController::class, 'getData'])->name('orangtua.nilai_akademik.data');
 
 Route::get('/jadwal_pelajaran_orangtua', [JadwalPelajaranOrangtuaController::class, 'index'])->name('orangtua.jadwal_pelajaran.index');
 Route::get('/jadwal_pelajaran_orangtua/data', [JadwalPelajaranOrangtuaController::class, 'getData'])->name('orangtua.jadwal_pelajaran.data');

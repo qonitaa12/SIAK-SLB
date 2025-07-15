@@ -2,7 +2,7 @@
   <div class="card-body">
     <p class="card-description text-muted">Ubah data nilai akademik</p>
 
-    <form id="formEditNilaiAkademik" action="{{ route('nilai_akademik.update', $nilai->id) }}" method="POST" onsubmit="return confirm('Yakin ubah data?')">
+    <form id="formEditNilaiAkademik" action="{{ route('guru.nilai_akademik.update', $nilai->id) }}" method="POST" onsubmit="return confirm('Yakin ubah data?')">
       @csrf
       @method('PUT')
 
@@ -188,7 +188,7 @@
 
         <div class="text-end mt-4">
           <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-          <a href="{{ route('nilai_akademik.index') }}" class="btn btn-light">Batal</a>
+          <a href="{{ route('guru.nilai_akademik.index') }}" class="btn btn-light">Batal</a>
         </div>
       </div>
     </form>
@@ -217,7 +217,7 @@
 
     if (id_mapel && id_kelas_siswa) {
       $.ajax({
-        url: `{{ route('nilai_akademik.get_guru_mapel') }}`,
+        url: `{{ route('guru.nilai_akademik.get_guru_mapel') }}`,
         type: 'POST',
         data: {
           _token: '{{ csrf_token() }}',
