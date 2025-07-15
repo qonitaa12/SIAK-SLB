@@ -31,7 +31,7 @@ RUN composer install --optimize-autoloader --no-dev
 # COPY .env.example .env
 
 # Generate app key (you could also do this via env var)
-RUN php artisan key:generate
+#RUN php artisan key:generate
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www \
