@@ -1,8 +1,22 @@
 {
-  "build": [
-    "composer install --no-dev --prefer-dist",
-    "php artisan key:generate",
-    "php artisan migrate --force"
-  ],
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "commands": [
+            "composer install --no-dev --prefer-dist"
+          ]
+        },
+        "build": {
+          "commands": [
+            "php artisan key:generate",
+            "php artisan migrate --force",
+            "php artisan config:cache"
+          ]
+        }
+      }
+    }
+  },
   "start": "php artisan serve --host=0.0.0.0 --port=$PORT"
 }
